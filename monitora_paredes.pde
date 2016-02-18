@@ -5,17 +5,32 @@ void MonitoraParedes()
   int bluecolid = 255;
   int space = 10;
   
-  sensorTopoX=posX+19;
+  sensorTopoX=posX+18;
   sensorTopoY=posY+2;
   
   sensorBaixoX=posX+19;
   sensorBaixoY=posY+35;
   
-  sensorDireitaX=posX+35;
+  sensorDireitaX=posX+33;
   sensorDireitaY=posY+20; 
    
   sensorEsquerdaX=posX+3;
   sensorEsquerdaY=posY+20;
+  
+  
+  sensorTopoEsquerdaX=posX;
+  sensorTopoEsquerdaY=posY;
+
+  sensorTopoDireitaX=posX;
+  sensorTopoDireitaY=posY;
+  
+  sensorBaixoEsquerdaX=posX;
+  sensorBaixoEsquerdaY=posY;
+
+  sensorBaixoDireitaX=posX;
+  sensorBaixoDireitaY=posY;
+  
+  
   
   color cTopo=get(sensorTopoX,sensorTopoY);
   fill(255,0,0);
@@ -47,10 +62,29 @@ void MonitoraParedes()
     ellipse(sensorEsquerdaX,sensorEsquerdaY, 10, 10);
     //println(cEsquerda);
   
-  if(blue(cTopo)==bluecolid || blue(cDireita)==bluecolid || blue(cBaixo)==bluecolid || blue(cEsquerda)==bluecolid){
-    pacDirecao = 0;
+  //if(blue(cTopo)==bluecolid || blue(cDireita)==bluecolid || blue(cBaixo)==bluecolid || blue(cEsquerda)==bluecolid){
+    //pacDirecao = 0;
     
+  
+//}
+ if(pacDirecao == 1){
+    if(blue(cTopo)==bluecolid){
+      pacDirecao = 0;
+    }
+  }else if(pacDirecao == 2){
+    if(blue(cDireita)==bluecolid){
+      pacDirecao = 0;
+    }
+  }else if(pacDirecao == 3){
+    if(blue(cBaixo)==bluecolid){
+      pacDirecao = 0;
+    }
+  }else if(pacDirecao == 4){
+    if(blue(cEsquerda)==bluecolid){
+      pacDirecao = 0;
+    }
   }
+  
   
   
   

@@ -16,9 +16,20 @@ int pacVelo;
 int sensorTopoX;
 int sensorTopoY;
 
+int sensorTopoEsquerdaX;
+int sensorTopoEsquerdaY;
+
+int sensorTopoDireitaX;
+int sensorTopoDireitaY;
 
 int sensorBaixoX;
 int sensorBaixoY;
+
+int sensorBaixoEsquerdaX;
+int sensorBaixoEsquerdaY;
+
+int sensorBaixoDireitaX;
+int sensorBaixoDireitaY;
 
 int sensorEsquerdaX;
 int sensorEsquerdaY;
@@ -28,6 +39,10 @@ int sensorDireitaY;
 
 int cTopo;
 int cBaixo;
+int cTopoEsquerda;
+int cBaixoEsquerda;
+int cTopoDireita;
+int cBaixoDireita;
 int cEsquerda;
 int cDireita;
 
@@ -35,6 +50,10 @@ boolean colidiuTopo;
 boolean colidiuBaixo;
 boolean colidiuDireita;
 boolean colidiuEsquerda;
+boolean colidiuTopoEsquerda;
+boolean colidiuBaixoEsquerda;
+boolean colidiuTopoDireita;
+boolean colidiuBaixoDireita;
 
 int persX;
 int persY;
@@ -61,7 +80,7 @@ void setup()
   posV = 420;
   
   pacDirecao = 2;
-  pacVelo = 3;
+  pacVelo = 1;
   
 
   
@@ -89,7 +108,7 @@ void draw()
   photo = loadImage("pac.png");
   image(photo, posX, posY, 40, 40);
   
-  perseguidor();
+ // perseguidor();
   movePac();
   
   println(pacDirecao);
@@ -101,7 +120,13 @@ void draw()
     } else if(pacDirecao == 2){
       posX += pacVelo; 
       
+     } else if(pacDirecao == 3){
+       posY += pacVelo;
+     
+     } else if(pacDirecao == 4){
+       posX -= pacVelo;
      }
+     
   }
   
   

@@ -1,4 +1,4 @@
-void perseguidor()
+/*void perseguidor()
 { 
   if(persX > posX)
   {
@@ -16,4 +16,4 @@ void perseguidor()
   {
     persY-=5;
   }
-}
+}*/
