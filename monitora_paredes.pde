@@ -25,7 +25,7 @@ void MonitoraParedes()
   sensorTopoDireitaY=posY;
   
   sensorBaixoEsquerdaX=posX;
-  sensorBaixoEsquerdaY=posY;
+  sensorBaixoEsquerdaY=posY+40;
 
   sensorBaixoDireitaX=posX;
   sensorBaixoDireitaY=posY;
@@ -44,6 +44,10 @@ void MonitoraParedes()
     fill(255,255,255);
     ellipse(sensorBaixoX,sensorBaixoY, 10, 10);
     //println(cBaixo);
+    
+    color cBaixoEsquerda=get(sensorBaixoEsquerdaX,sensorBaixoEsquerdaY);
+    fill(#E3DC0B);
+    ellipse(sensorBaixoEsquerdaX,sensorBaixoEsquerdaY, 10, 10);
   
   
  
