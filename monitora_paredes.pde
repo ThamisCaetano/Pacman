@@ -12,30 +12,41 @@ void MonitoraParedes()
   sensorBaixoY=posY+35;
   
   sensorDireitaX=posX+33;
-  sensorDireitaY=posY+20; 
+  sensorDireitaY=posY+21; 
    
   sensorEsquerdaX=posX+3;
   sensorEsquerdaY=posY+20;
   
   
-  sensorTopoEsquerdaX=posX;
-  sensorTopoEsquerdaY=posY;
+  sensorTopoEsquerdaX=posX+7;
+  sensorTopoEsquerdaY=posY+8;
 
-  sensorTopoDireitaX=posX;
-  sensorTopoDireitaY=posY;
+  sensorTopoDireitaX=posX+33;
+  sensorTopoDireitaY=posY+7;
   
-  sensorBaixoEsquerdaX=posX;
-  sensorBaixoEsquerdaY=posY;
+  sensorBaixoEsquerdaX=posX+10;
+  sensorBaixoEsquerdaY=posY+35;
 
-  sensorBaixoDireitaX=posX;
-  sensorBaixoDireitaY=posY;
+  sensorBaixoDireitaX=posX+25;
+  sensorBaixoDireitaY=posY+35;
   
+  
+  
+  color cTopoEsquerda=get(sensorTopoEsquerdaX,sensorTopoEsquerdaY);
+  fill(255,0,0);
+  ellipse(sensorTopoEsquerdaX,sensorTopoEsquerdaY, 10, 10);
+  
+  color cTopoDireita=get(sensorTopoDireitaX,sensorTopoDireitaY);
+  fill(255,0,0);
+  ellipse(sensorTopoDireitaX,sensorTopoDireitaY, 10, 10);
   
   
   color cTopo=get(sensorTopoX,sensorTopoY);
   fill(255,0,0);
   ellipse(sensorTopoX,sensorTopoY, 10, 10);
   //println(red(cTopo));
+  
+  
   
   
   

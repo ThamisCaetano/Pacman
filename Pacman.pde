@@ -80,7 +80,7 @@ void setup()
   posV = 420;
   
   pacDirecao = 2;
-  pacVelo = 1;
+  pacVelo = 3;
   
 
   
