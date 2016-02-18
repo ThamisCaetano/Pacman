@@ -1,45 +1,3 @@
-/*void keyPressed ()
-{
-  //if (key==CODED)
-  switch(keyCode){
-    case UP:
-      cima = true;
-    break;
-    
-    case DOWN:
-      baixo = true;
-    break;
-    
-    case RIGHT:
-      direita = true;
-    break;
-    
-    case LEFT:
-      esquerda = true;
-    break;
-  
-  } 
-}
-
-
-void keyReleased ()
-{
-  if (key==CODED)
-  {
-    if (keyCode == UP)
-      cima = false;
-      
-      else if (keyCode == DOWN)
-        baixo = false;
-        
-        else if (keyCode == RIGHT)
-          direita = false;
-          
-          else if (keyCode == LEFT)
-            esquerda = false;
-  }
-}*/
-
 boolean keyInUse = false;
 
 void keyReleased()
@@ -57,19 +15,19 @@ void movePac()
    if (key == CODED  && !keyInUse) {    
     keyInUse = true;
     
-     if (keyCode == UP && !colidiuTopo)
+     if (keyCode == UP && !colidiuTopo && pacDirecao != 1)
      {
        pacDirecao = 1;
      }
-     else if (keyCode == DOWN && !colidiuBaixo)
+     else if (keyCode == DOWN && !colidiuBaixo && pacDirecao != 3)
      {
        pacDirecao = 3;
      }
-     else if (keyCode == LEFT && !colidiuEsquerda)
+     else if (keyCode == LEFT && !colidiuEsquerda && pacDirecao != 4)
      {
        pacDirecao = 4;
      }
-     else if (keyCode == RIGHT && !colidiuDireita)
+     else if (keyCode == RIGHT && !colidiuDireita && pacDirecao != 2)
      {
        pacDirecao = 2;
      }
