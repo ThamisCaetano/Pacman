@@ -86,23 +86,26 @@ void MonitoraParedes()
     
   
 //}
- if(pacDirecao == 1){
+ if(pacDirecao == 1 && blue(cTopoDireita)==bluecolid && blue(cTopoEsquerda)==bluecolid){
     if(blue(cTopo)==bluecolid){
       pacDirecao = 0;
     }
-  }else if(pacDirecao == 2){
+  }else if(pacDirecao == 2 && blue(cTopoDireita)==bluecolid  && blue(cBaixoDireita)==bluecolid){
     if(blue(cDireita)==bluecolid){
       pacDirecao = 0;
     }
-  }else if(pacDirecao == 3){
+  }else if(pacDirecao == 3 && blue(cBaixoDireita)==bluecolid && blue(cBaixoEsquerda)==bluecolid){
     if(blue(cBaixo)==bluecolid){
       pacDirecao = 0;
     }
-  }else if(pacDirecao == 4){
+  }else if(pacDirecao == 4 && blue(cBaixoEsquerda)==bluecolid && blue(cTopoEsquerda)==bluecolid){
     if(blue(cEsquerda)==bluecolid){
       pacDirecao = 0;
     }
   }
+  
+  
+  
   
   
   
